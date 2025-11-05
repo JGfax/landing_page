@@ -1,7 +1,7 @@
 <?php
 // db.php
 $host = 'localhost';
-$db   = 'pwbe';
+$db   = 'landing';
 $user = 'root';
 $pass = 'Home@spSENAI2025!';
 $charset = 'utf8mb4';
