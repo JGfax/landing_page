@@ -3,16 +3,14 @@ require 'conexao.php';
 
 // Inserir
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $titulo = $_POST['titulo'] ?? '';
   $descricao = $_POST['descricao'] ?? '';
-  $autor = $_POST['autor'] ?? '';
-  $stmt = $pdo->prepare("INSERT INTO relatorios (titulo, descricao, autor) VALUES (?, ?, ?)");
-  $stmt->execute([$titulo, $descricao, $autor]);
+  $stmt = $pdo->prepare("INSERT INTO tbl_servicos (descricao) VALUES (?)");
+  $stmt->execute([$descricao]);
   echo "Relatório salvo com ID: " . $pdo->lastInsertId();
   exit;
 }
 // Listar
-$stmt = $pdo->query("SELECT * FROM relatorios ORDER BY data_criacao DESC");
+$stmt = $pdo->query("SELECT * FROM tbl_servicos ORDER BY id_servico DESC");
 $rows = $stmt->fetchAll();
 ?>
 <!doctype html>
