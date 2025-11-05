@@ -40,41 +40,5 @@ $rows = $stmt->fetchAll();
 </form>
 </section>
 
-<section>
-  <div class="section-header">
-  <h2>Relatórios gravados</h2>
-  <div class="conjunto">
-<a href="export_csv.php"> <i class="fa-solid fa-file-csv"> </i>Exportar CSV</i></a>
-<a href="export_xml.php"><i class="fa-solid fa-file-xml"></i> Exportar XML</a>
-<a href="generate_pdf.php"><i class="fa-solid fa-file-pdf"></i> Exportar PDF</a>
-</div>
-  </div>
-<table border="1" cellpadding="6">
-  <thead>
-  <tr><th style="width: 5%;">ID</th><th>Título</th><th>Autor</th><th>Descrição</th><th>Data</th></tr>
-  </thead>
-  <tbody>
-  <?php if (count($rows) === 0): ?>
-    <tr>
-      <td colspan="5" style="text-align:center; padding:15px; color:#777;">
-        Não há registros.
-      </td>
-    </tr>
-  <?php else: ?>
-    <?php foreach($rows as $r): ?>
-      <tr>
-        <td><?= htmlspecialchars($r['id']) ?></td>
-        <td><?= htmlspecialchars($r['titulo']) ?></td>
-        <td><?= htmlspecialchars($r['autor']) ?></td>
-        <td><?= htmlspecialchars($r['descricao']) ?></td>
-        <td><?= htmlspecialchars($r['data_criacao']) ?></td>
-      </tr>
-    <?php endforeach; ?>
-  <?php endif; ?>
-</tbody>
-
-</table>  
-</section>
-  </main>
 </body>
 </html>
