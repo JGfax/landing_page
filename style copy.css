@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+  color: #1b001f;
+  background: #fcfcfc;
+}
+main {
+  width: 100%;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 30px;
+  margin: auto;
+}
+section {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-flow: column wrap;
+  padding: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.section-header {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  gap: 15px;
+  padding: 15px;
+  padding-bottom: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: auto;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #45c1ff;
+}
+
+.conjunto {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 0px;
+}
+
+form {
+  display: inline-flex;
+  flex-flow: column wrap;
+  padding: 15px;
+  gap: 5px;
+  background: #f1fffa;
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  border: 1px solid aliceblue;
+  outline: 1px solid aliceblue;
+  border-radius: 0px 0px 15px 15px;
+  transition: all 0.1s ease-in-out;
+}
+form textarea:hover,
+form textarea:focus {
+  border-color: #45c1ff;
+}
+button {
+  padding: 5px;
+  border-radius: 2rem;
+  color: #ffffff;
+  font-weight: bolder;
+  background: #27b500;
+  outline: 1px solid #007d4f;
+  border: 1px solid #007d4f;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+button:hover,
+a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+input {
+  width: 100%;
+  height: 32px;
+  border-radius: 0px 10px 10px 0;
+  outline: 1px solid aliceblue;
+  border: 1px solid aliceblue;
+  padding: 10px;
+  transition: all 0.15s ease-in-out;
+}
+input:hover {
+  border-color: #45c1ff;
+}
+
+.conjunto:focus-within label {
+  border: 1px solid #45c1ff;
+  border-right: none;
+  background: #e6f7ff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Quando o input for hover */
+.conjunto:hover label {
+  border: 1px solid #45c1ff;
+  border-right: none;
+  background: #f0fbff;
+  transition: all 0.2s ease-in-out;
+}
+.conjunto label {
+  height: 32px;
+  width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  align-content: center;
+  background: aliceblue;
+  border-radius: 10px 0px 0px 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #45c1ff;
+}
+
+/* Cabeçalho */
+table thead {
+  background: #45c1ff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+table thead th {
+  padding: 10px 15px;
+  color: #ffffff;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #27b500;
+}
+
+/* Linhas */
+table tbody tr {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Células */
+table td {
+  padding: 10px 15px;
+  color: #1b001f;
+}
+
+/* Efeito hover */
+table tbody tr:hover {
+  background: #f1fffa;
+}
+
+/* Alternância de cores entre linhas */
+table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Botões dentro da tabela */
+table td a,
+table td button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: none;
+}
+
+table td a {
+  background: #350057;
+  color: #fff;
+}
+
+table td button {
+  background: #27b500;
+  color: #fff;
+}
+
+table td a:hover,
+table td button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+a {
+  text-decoration: none;
+  padding: 5px;
+  margin: auto;
+  color: #f1fffa;
+  background: #350057;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.section-header .conjunto {
+  gap: 10px;
+}

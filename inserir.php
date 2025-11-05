@@ -1,0 +1,80 @@
+<?php
+require 'conexao.php';
+
+// Inserir
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $titulo = $_POST['titulo'] ?? '';
+  $descricao = $_POST['descricao'] ?? '';
+  $autor = $_POST['autor'] ?? '';
+  $stmt = $pdo->prepare("INSERT INTO relatorios (titulo, descricao, autor) VALUES (?, ?, ?)");
+  $stmt->execute([$titulo, $descricao, $autor]);
+  echo "Relatório salvo com ID: " . $pdo->lastInsertId();
+  exit;
+}
+// Listar
+$stmt = $pdo->query("SELECT * FROM relatorios ORDER BY data_criacao DESC");
+$rows = $stmt->fetchAll();
+?>
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Relatórios</title></head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+  <main>
+<section>
+  <div class="section-header">
+  <h1>Inserir Relatório</h1>
+  </div>
+<form method="post">
+  <div class="conjunto">
+  <label for=""><i class="fa-solid fa-user"></i></label>
+  <input name="titulo" placeholder="Título" required><br>
+  </div>
+  <div class="conjunto">
+  <label for=""> <i class="fa-solid fa-file-signature"></i></label>
+    <input name="autor" placeholder="Autor"><br>
+  </div>
+  <textarea name="descricao" placeholder="Descrição"></textarea><br>
+  <button>Salvar</button>
+</form>
+</section>
+
+<section>
+  <div class="section-header">
+  <h2>Relatórios gravados</h2>
+  <div class="conjunto">
+<a href="export_csv.php"> <i class="fa-solid fa-file-csv"> </i>Exportar CSV</i></a>
+<a href="export_xml.php"><i class="fa-solid fa-file-xml"></i> Exportar XML</a>
+<a href="generate_pdf.php"><i class="fa-solid fa-file-pdf"></i> Exportar PDF</a>
+</div>
+  </div>
+<table border="1" cellpadding="6">
+  <thead>
+  <tr><th style="width: 5%;">ID</th><th>Título</th><th>Autor</th><th>Descrição</th><th>Data</th></tr>
+  </thead>
+  <tbody>
+  <?php if (count($rows) === 0): ?>
+    <tr>
+      <td colspan="5" style="text-align:center; padding:15px; color:#777;">
+        Não há registros.
+      </td>
+    </tr>
+  <?php else: ?>
+    <?php foreach($rows as $r): ?>
+      <tr>
+        <td><?= htmlspecialchars($r['id']) ?></td>
+        <td><?= htmlspecialchars($r['titulo']) ?></td>
+        <td><?= htmlspecialchars($r['autor']) ?></td>
+        <td><?= htmlspecialchars($r['descricao']) ?></td>
+        <td><?= htmlspecialchars($r['data_criacao']) ?></td>
+      </tr>
+    <?php endforeach; ?>
+  <?php endif; ?>
+</tbody>
+
+</table>  
+</section>
+  </main>
+</body>
+</html>
