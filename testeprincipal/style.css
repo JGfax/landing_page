@@ -5,17 +5,14 @@
     body {
         margin: 0; /* remove margens padrão */
         height: 50px;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
         background-image: url("image/fundo.webp"); /* caminho da imagem */
         background-size: cover; /* cobre toda a área */
         background-position: center; /* centraliza a imagem */
         background-repeat: no-repeat;
-        background-color: #080038;
+        background-color: #00076d;
         margin-bottom: 70px; /* igual ou um pouco maior que a altura do rodapé */
     }
+
 
 
 .menu {
@@ -94,7 +91,7 @@
 /* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #080038;
     margin: 0;
     padding: 0;
 }
@@ -113,9 +110,10 @@ hr {
     width: 50%;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    background-color: #5e78ee38;
+    border-radius:8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(7, 0, 66);
 }
 
 /*==================================== formulario =================================*/
@@ -129,9 +127,10 @@ form { /* estilo do formulario (fundo) */
     margin: 0 auto;
     margin-right: 600px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(47, 58, 124, 0.849);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .form-container { /* centraliza o formulario na pagina */
@@ -170,10 +169,10 @@ input[type="text"], input[type="email"] {
   padding: 10px;
   text-align: left;
   font-size: 14px;
-  border: 1px solid #949292b7;
+  border: 1px solid #06005ab7;
   border-radius: 8px;
   width: 80%;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 select[name="id_servico"]  {
@@ -209,21 +208,22 @@ select:focus[name="id_servico"] {
 
 
 button { /* botão enviar */
-    background-color: #3d6ceb;
+    background-color: #000f38;
     color: white;
     border: none;
     padding: 20px 40px;
     font-size: 16px;
-    margin-top: 40px;
     border-radius: 4px;
     cursor: pointer;
     margin-left: 50px;
     width: 83%;
+    border: 2px solid rgb(255, 255, 255);
 }
+
 
 button:hover {
     transition: background-color 0.3s ease;
-    background-color: #2c4a9c;
+    background-color: #000c2e;
 }
 
 
@@ -240,5 +240,16 @@ button:hover {
   line-height: 1.8;
   font-weight: bold;
   text-align: justify;
-  color: #5b3727;
+  color: #000000;
+}
+
+h1{
+  color: #ffffff;
+    font-size: 2.2rem;
+
+}
+
+P{
+  color: #ffffff;
+  font-size: 30px;
 }

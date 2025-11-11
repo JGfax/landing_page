@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- // Formulário de inserção //-->
 <section class="formulario">
   <div class="formulario-header">
-  <h1>Inserir Relatório</h1>
+  <h1>INSERIR RELATORIOS</h1>
   </div>
 </section>
 
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </p>
             
 
-                <p style="margin-top: 10px; color:blueviolet; font-size: 70px;">
+                <p style="margin-top: 10px; color:BLUE; font-size: 70px;">
                   MUNDO DIGITAL.
                 </p>
 
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <form method="post">
 
-  <div class="conjunto"> <br> <br>
+  <div class="conjunto"> 
   <label for="nome"> Nome <i class="fa-solid fa-user"></i></label>
   <input type="text" name="nome" placeholder="nome" required><br>
 
@@ -131,6 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </select>
   </div> 
 
+  <br> 
   <button> Salvar </button>
 
 </form>
