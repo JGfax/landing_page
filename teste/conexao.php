@@ -1,17 +1,14 @@
 <?php
-// db.php
-$host = 'localhost';
-$db   = 'meubanco';
-$user = 'root';
-$pass = 'Home@spSENAI2025!';
-$charset = 'utf8mb4';
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
-try {
-  $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (PDOException $e) {
-  die("DB connection failed: " . $e->getMessage());
+// Configurações do banco de dados
+$servidor = "localhost";    // Geralmente 'localhost'
+$usuario_bd = "root";       // Usuário do seu banco de dados
+$senha_bd = "Home@spSENAI2025!";             // Senha do seu banco de dados
+$banco = "meu_banco";        // Nome do banco de dados que você criou
+// Cria a conexão
+$conexao = mysqli_connect($servidor, $usuario_bd, $senha_bd, $banco);
+
+// Verifica a conexão
+if (!$conexao) {
+    die("Falha na conexão: " . mysqli_connect_error());
 }
+?>
