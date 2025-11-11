@@ -38,13 +38,13 @@ try {
 
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
                 <ul>
-                    <li><a href="instrumentos.html" target="">Instrumentos</a></li>
+                    <li><a href="inserir.php" target="">MENU</a></li>
                 </ul>
             </nav>
 
             <!-- Menu mobile -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="#">Saiba Mais</a>
+                <a href="inserir.php">MENU</a>
             </div>
 
             <script>

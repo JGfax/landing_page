@@ -34,31 +34,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head><meta charset="utf-8"><title>Relatórios</title></head>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-<a href="index.html" target="_top">
-<img src="image/logo.webp" alt="logo" width="50px">
+
 
 <body>
 
 
-<div class="overlay"></div>
+ <div class="overlay"></div>
 
   <div class="conteudo">
 
   <!-- ================== MENU ================== -->
     <section id="menu">
         <nav class="menu">
-            <div class="logo"> 
-                <a href="index.html" target="_top">
-                </a>
+
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="inserir.php" target="">MENU</a></li>
+                </ul>
+            </nav>
+
+            <!-- Menu mobile -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="inserir.php">MENU</a>
             </div>
 
-
-            <ul>
-                <li><a href="#">Página Inicial</a></li>
-            </ul>
-        </nav>
-
-
+            <script>
+                function toggleMenu() {
+                    var menu = document.getElementById("mobileMenu");
+                    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+                }
+            </script>
+        </section>
 
   <main>
 
@@ -112,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <!-- // Campo de telefone // -->
   <div class="conjunto">
-  <label for="telefone"> Telefone <i class="fa-solid fa-file-signature"></i></label>
+  <label for="telefone"> Telefone <i class="fa-solid fa-phone"></i></label>
     <input type="text" name="telefone" placeholder="telefone" required><br>
 
      <hr>
@@ -121,13 +127,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- // Campo de servico // -->
 
      <div class="conjunto">
-  <label for="servico"> Serviço <i class="fa-solid fa-file-signature"></i></label>
+  <label for="servico"> Serviço <i class="fa-solid fa-industry"></i></label>
       <select id="tbl_servico" name="id_servico" >
 
       <option value=""> -- Selecione um Serviço -- </option>
-      <option value="1">SP</option>
-      <option value="2">RJ</option>
-      <option value="3">MG</option>
+      <option value="1">Desenvolvimento Web</option>
+      <option value="2">Suporte Técnico</option>
+      <option value="3">Segurança da Informação</option>
+      <option value="4">Consultoria em TI</option>
       </select>
   </div> 
 

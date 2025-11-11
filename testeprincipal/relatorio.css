@@ -15,20 +15,20 @@
 
 
 .menu {
-    background-image: linear-gradient(to right, #000222, #4b8aff);
-    padding: 5px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Faz o menu ocupar toda a largura da tela */
-    position: fixed; /* Para fixar o menu no topo */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Para garantir que o menu fique sobre outros elementos */
+  background-image: linear-gradient(to right, #000222, #4b8aff);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .menu ul {
@@ -68,18 +68,26 @@
   font-size: 38px;
   cursor: pointer;
   user-select: none;
+  position: relative;
+  left: 90%;
+  top: 0;
+  margin-right: 10px;
+  z-index: 1100;
 }
 
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background-color: #5d50eb;
+  background-color: #202ab5;
   opacity: 0.95;
   position: absolute;
-  top: 90px;
-  left: 0;
-  width: 50%;
+  top: 60px; /* dentro da barra de menu */
+  border: 1px solid #040949;
+  left: 60%;
+  width: 220px;
   z-index: 1000;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
 .mobile-menu a {
@@ -87,7 +95,7 @@
   padding: 12px;
   text-decoration: none;
   border-bottom: 1px solid #0b1b4a;
-  text-align: center;
+  text-align: left;
 }
 
  /* ========================== TABELA ================================ */
