@@ -1,24 +1,32 @@
 <?php
 require 'conexao.php';
 
-// Inserir
+// Buscar os serviços da tabela
+try {
+  $servicos = $pdo->query("SELECT id_servico, descricao FROM tbl_servicos")->fetchAll();
+} catch (Exception $e) {
+  $servicos = [];
+  echo "Erro ao carregar serviços: " . $e->getMessage();
+}
+
+// Inserir cliente
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nome = $_POST['nome'] ?? '';
   $email = $_POST['email'] ?? '';
   $telefone = $_POST['telefone'] ?? '';
-  
+  $id_servico = $_POST['id_servico'] ?? null;
+
   try {
-    $stmt = $pdo->prepare("INSERT INTO tbl_clientes (nome, email, telefone) VALUES (?, ?, ?)");
-    $stmt->execute([$nome, $email, $telefone]);
-    $id = $pdo->lastInsertId();
-    // Redirecionar para relatorio.php após sucesso
-    header("Location: relatorio.php?msg=Relatório salvo com ID: " . $id);
+    $stmt = $pdo->prepare("INSERT INTO tbl_clientes (nome, email, telefone, id_servico) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$nome, $email, $telefone, $id_servico]);
+    header("Location: relatorio.php?msg=Salvo com sucesso!");
     exit;
   } catch (Exception $e) {
-    $erro = "Erro ao salvar: " . $e->getMessage();
+    echo "Erro ao salvar: " . $e->getMessage();
   }
 }
 ?>
+
 
 <!doctype html>
 
@@ -64,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="conjunto"> <br> <br>
   <label for="nome"> Nome <i class="fa-solid fa-user"></i></label>
-  <input type="text" placeholder="nome" required><br>
+  <input type="text" name="nome" placeholder="nome" required><br>
 
   <hr>
   </div>
@@ -73,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  <!-- // Campo de email // -->
   <div class="conjunto">
   <label for="email"> E-mail <i class="fa-solid fa-file-signature"></i></label>
-    <input type="email" placeholder="email"><br>
+    <input type="email" name="email" placeholder="email" required><br>
 
      <hr>
   </div>
@@ -81,15 +89,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- // Campo de telefone // -->
   <div class="conjunto">
   <label for="telefone"> Telefone <i class="fa-solid fa-file-signature"></i></label>
-    <input type="text" placeholder="telefone"><br>
+    <input type="text" name="telefone" placeholder="telefone" required><br>
 
      <hr>
   </div>
   
   <!-- // Campo de servico // -->
-   <div class="conjunto">
+
+     <div class="conjunto">
   <label for="servico"> Serviço <i class="fa-solid fa-file-signature"></i></label>
       <select id="tbl_servico" name="id_servico" >
+
+      <option value=""> -- Selecione um Serviço -- </option>
       <option value="1">SP</option>
       <option value="2">RJ</option>
       <option value="3">MG</option>
