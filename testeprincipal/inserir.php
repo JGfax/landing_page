@@ -38,6 +38,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <img src="image/logo.webp" alt="logo" width="50px">
 
 <body>
+
+
+<div class="overlay"></div>
+
+  <div class="conteudo">
+
+  <!-- ================== MENU ================== -->
+    <section id="menu">
+        <nav class="menu">
+            <div class="logo"> 
+                <a href="index.html" target="_top">
+                </a>
+            </div>
+
+
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+            </ul>
+        </nav>
+
+
+
   <main>
 
   <!-- // Formulário de inserção //-->
@@ -110,10 +132,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div> 
 
   <button> Salvar </button>
-</form>
 
+</form>
   </div>
 
+    </section>
 </section>
   </main>
 </body>

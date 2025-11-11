@@ -1,4 +1,97 @@
 
+/* =====================  MENU ===================== */
+
+ /* Faz a imagem de fundo ocupar toda a tela */
+    body {
+        margin: 0; /* remove margens padrão */
+        height: 50px;
+        background-image: url("image/fundo.webp"); /* caminho da imagem */
+        background-size: cover; /* cobre toda a área */
+        background-position: center; /* centraliza a imagem */
+        background-repeat: no-repeat;
+        background-color: #080038;
+        margin-bottom: 70px; /* igual ou um pouco maior que a altura do rodapé */
+    }
+
+
+.menu {
+    background-image: linear-gradient(to right, #000222, #4b8aff);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Faz o menu ocupar toda a largura da tela */
+    position: fixed; /* Para fixar o menu no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Para garantir que o menu fique sobre outros elementos */
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-grow: 1; /* Faz a lista de links ocupar o máximo de espaço possível */
+    justify-content: flex-start;
+}
+
+.menu ul li {
+    padding: 10px;
+    display: flex;
+}
+
+.menu li a {
+    color: white;
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    margin-left: 20px;
+    border-radius: 0px;
+}
+
+.menu li a:hover {
+    border-radius: 5px;
+    background-color: #b9b8ff;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(8, 0, 51, 0.781);
+    transform: translateY(-10px);
+}
+
+ /* ========================== IMAGEM FUNDO ================================ */
+
+    /* Exemplo de conteúdo em cima da imagem */
+    .conteudo {
+        position: relative; /* mantém em cima do fundo */
+        z-index: 1; /* garante que fique sobre a imagem */
+        color: white; /* texto visível */
+        text-align: center;
+        padding: 50px;
+        font-size: 2rem;
+    }
+
+    /* Se quiser colocar um fundo semitransparente atrás do texto */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* preto com transparência */
+        z-index: 0; /* fica atrás do conteúdo */
+    }
+
+td {
+    font-size: 25px;
+}
+
+th {
+    font-size: 20px;
+}
+
 /*==================================== corpo ==========================================*/
 /* Estilos básicos */
 body {

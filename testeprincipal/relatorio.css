@@ -1,5 +1,18 @@
 /* =====================  MENU ===================== */
 
+ /* Faz a imagem de fundo ocupar toda a tela */
+    body {
+        margin: 0; /* remove margens padrão */
+        height: 50px;
+        background-image: url("image/fundo.webp"); /* caminho da imagem */
+        background-size: cover; /* cobre toda a área */
+        background-position: center; /* centraliza a imagem */
+        background-repeat: no-repeat;
+        background-color: #080038;
+        margin-bottom: 70px; /* igual ou um pouco maior que a altura do rodapé */
+    }
+
+
 .menu {
     background-image: linear-gradient(to right, #000222, #4b8aff);
     padding: 5px 10px;
@@ -76,17 +89,6 @@ tbody tr:hover {
 
  /* ========================== IMAGEM FUNDO ================================ */
 
- /* Faz a imagem de fundo ocupar toda a tela */
-    body {
-        margin: 0; /* remove margens padrão */
-        height: 50px;
-        background-image: url("image/fundo.webp"); /* caminho da imagem */
-        background-size: cover; /* cobre toda a área */
-        background-position: center; /* centraliza a imagem */
-        background-repeat: no-repeat;
-        background-color: #080038;
-    }
-
     /* Exemplo de conteúdo em cima da imagem */
     .conteudo {
         position: relative; /* mantém em cima do fundo */
@@ -130,11 +132,6 @@ footer {
     justify-content: center;
     text-align: center;
     z-index: 1000;                  /* garante que fique acima de outros elementos */
-}
-
-/* Ajuste para o conteúdo não ficar escondido atrás do rodapé */
-body {
-    margin-bottom: 70px; /* igual ou um pouco maior que a altura do rodapé */
 }
 
 .footer-section {
