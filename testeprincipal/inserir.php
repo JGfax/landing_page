@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head><meta charset="utf-8"><title>Relatórios</title></head>
 <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <body>
   <main>
 
@@ -51,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input name="email" placeholder="email"><br>
 
      <hr>
-
   </div>
 
   <!-- // Campo de telefone // -->
@@ -60,9 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input name="telefone" placeholder="telefone"><br>
 
      <hr>
-
   </div>
-
+  
   <!-- // Campo de servico // -->
    <div class="conjunto">
   <label for=""> <i class="fa-solid fa-file-signature"></i></label>
@@ -70,13 +68,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <option value="id_servico">SP</option>
       <option value="id_servico">RJ</option>
       <option value="id_servico">MG</option>
+      </select>
 
      <hr>
-     
   </div>
 
-  <button>Salvar</button>
   
+  <button> Salvar </button>
+
+
+
 </form>
 </section>
   </main>
