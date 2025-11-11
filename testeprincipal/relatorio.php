@@ -10,6 +10,7 @@ try {
   $erro = "Erro ao buscar dados: " . $e->getMessage();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,13 +22,6 @@ try {
 
 </head>
 <body>
-
-<script>
-  const menu = document.querySelector('.menu');
-  menu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
 
         
   <div class="overlay"></div>
@@ -47,13 +41,13 @@ try {
                 <li><a href="#">Página Inicial</a></li>
             </ul>
         </nav>
-    
+
 
     <h1>Relatórios gravados</h1>
   
-
-    
 <br><br><br><br><br>
+
+
 <section>
     <p>Análise Detalhada de Resultados</p>
 

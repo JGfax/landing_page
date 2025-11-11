@@ -117,10 +117,10 @@ th {
 }
 /* ===================== RODAPÉ ===================== */
 footer {
-    position: fixed;                /* fixa o rodapé na parte inferior */
-    bottom: 0;                      /* alinha ao fundo */
-    left: 0;                        /* alinha à esquerda */
-    width: 100%;                    /* ocupa toda a largura da tela */
+    position: fixed;    /* fixa o rodapé na parte inferior */
+    bottom: 0;        /* alinha ao fundo */
+    left: 0;          /* alinha à esquerda */
+    width: 100%;     /* ocupa toda a largura da tela */
     background-image: linear-gradient(to right, #000222, #4b8aff);
     color: #fff;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
@@ -238,14 +238,6 @@ footer {
     display: flex; /* mostra menu ao clicar */
   }
 
-  .menu::after {
-    content: "☰";
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
 
   .menu.active::after {
     content: "✕";
