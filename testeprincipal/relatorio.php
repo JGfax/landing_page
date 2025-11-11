@@ -11,7 +11,7 @@ try {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@ try {
 
 <table border="1" cellpadding="6">
   <thead>
-  <tr><th style="width: 60%;">nome</th><th>email</th><th>telefone</th>
+  <tr><th style="width: 60%;">nome</th><th>email</th><th>telefone</th><th>servicos</th>
   </thead>
   <tbody>
   <?php if (count($rows) === 0): ?>
@@ -41,6 +41,7 @@ try {
         <td><?= htmlspecialchars($r['nome']) ?></td>
         <td><?= htmlspecialchars($r['email']) ?></td>
         <td><?= htmlspecialchars($r['telefone']) ?></td>
+        <td><?= htmlspecialchars($r['id_servico']) ?></td>
       </tr>
     <?php endforeach; ?>
   <?php endif; ?>
