@@ -17,7 +17,7 @@ hr {
 
 /*==================================== formulario fundo =============================*/
 
-.formulario-header { //*titulo do formulario (fundo) */
+.formulario-header { /*titulo do formulario (fundo) */
     text-align: center;
     width: 50%;
     margin: 50px auto;
@@ -28,44 +28,126 @@ hr {
 }
 
 /*==================================== formulario =================================*/
+    
 
-form {
+form { /* estilo do formulario (fundo) */
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 27%;
+    height: 550px;
     margin: 0 auto;
+    margin-right: 600px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    font-size: 45px;
-    margin-bottom: 5px;
-    text-align: center;
+.form-container { /* centraliza o formulario na pagina */
+  position: relative;
+  left: 300px;  /* move para a direita */
 }
 
+.conjunto { /* estilo dos conjuntos de label e input */
+  display: flex;
+  flex-direction: column; /* coloca label acima do input */
+  align-items: center; /* centraliza o conteúdo */
+}
+
+/* Label em cima do input */
+.conjunto label {
+  text-align: left;
+  width: 70%;  /* para acompanhar a largura dos inputs */
+  display: block;
+  font-size: 13px; /*texto maior*/
+  margin-right: 40px;
+  color: #333;
+  font-weight: none;
+  margin-bottom: 5px;
+}
+
+
+.label-icon { /* estilo do ícone dentro do label */
+  display: flex;          /* coloca ícone e campo na mesma linha */
+  align-items: center;    /* centraliza verticalmente */
+  gap: 8px;               /* espaço entre o ícone e o select */
+}
+
+
+/* Campos de entrada */
 input[type="text"], input[type="email"] {
-    padding: 10px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #949292b7;
+  border-radius: 8px;
+  width: 80%;
+  background-color: #fff;
 }
 
-button {
-    background-color: #1951eb;
+select[name="id_servico"]  {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #949292b7;
+  border-radius: 8px;
+  width: 83%;
+  background-color: #fff;
+}
+
+/* Campos de entrada após clicar */
+input:focus[type="text"], input:focus[type="email"] {
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #3d77f3d8;
+  outline: none; /* remove o contorno padrão do navegador */
+  border-radius: 8px;
+  width: 80%;
+  background-color: #fff;
+}
+
+select:focus[name="id_servico"] {
+  text-align: left;
+  font-size: 14px;
+  border: 2px solid #3d77f3d8;
+  outline: none; /* remove o contorno padrão do navegador */
+  border-radius: 8px;
+  width: 83%;
+  background-color: #fff;
+}
+
+
+button { /* botão enviar */
+    background-color: #3d6ceb;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 40px;
     font-size: 16px;
+    margin-top: 40px;
     border-radius: 4px;
     cursor: pointer;
-    width: 15%;
+    margin-left: 50px;
+    width: 83%;
 }
 
 button:hover {
-    background-color: #882121;
+    transition: background-color 0.3s ease;
+    background-color: #2c4a9c;
 }
 
+
+/*==================================== TEXTO AO LADO ================================*/
+
+.formulario-body {
+    display: flex;
+}
+
+/* TEXTO À ESQUERDA */
+.texto {
+  max-width: 600px;
+  font-size: 30px;
+  line-height: 1.8;
+  font-weight: bold;
+  text-align: justify;
+  color: #5b3727;
+}

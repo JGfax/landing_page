@@ -31,15 +31,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <main>
 
   <!-- // Formulário de inserção //-->
-<section>
+<section class="formulario">
   <div class="formulario-header">
   <h1>Inserir Relatório</h1>
   </div>
+</section>
+
+
+<section class="form-container">
+  <div class="formulario-body">
+
+  
+            <div class="texto"> <br>
+                <p>
+                  Na TechNova Solutions, transformamos ideias em soluções digitais inteligentes. 
+                </p>
+
+                <p>
+                  Com foco em inovação, segurança e eficiência, ajudamos empresas a automatizar processos, otimizar sistemas e crescer no 
+                </p>
+            
+
+                <p style="margin-top: 10px; color:blueviolet; font-size: 70px;">
+                  MUNDO DIGITAL.
+                </p>
+
+                </p>
+            </div>
+
+
 <form method="post">
 
-  <div class="conjunto">
-  <label for=""><i class="fa-solid fa-user"></i></label>
-  <input name="nome" placeholder="nome" required><br>
+  <div class="conjunto"> <br> <br>
+  <label for="nome"> Nome <i class="fa-solid fa-user"></i></label>
+  <input type="text" placeholder="nome" required><br>
 
   <hr>
   </div>
@@ -47,38 +72,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
  <!-- // Campo de email // -->
   <div class="conjunto">
-  <label for=""> <i class="fa-solid fa-file-signature"></i></label>
-    <input name="email" placeholder="email"><br>
+  <label for="email"> E-mail <i class="fa-solid fa-file-signature"></i></label>
+    <input type="email" placeholder="email"><br>
 
      <hr>
   </div>
 
   <!-- // Campo de telefone // -->
   <div class="conjunto">
-  <label for=""> <i class="fa-solid fa-file-signature"></i></label>
-    <input name="telefone" placeholder="telefone"><br>
+  <label for="telefone"> Telefone <i class="fa-solid fa-file-signature"></i></label>
+    <input type="text" placeholder="telefone"><br>
 
      <hr>
   </div>
   
   <!-- // Campo de servico // -->
    <div class="conjunto">
-  <label for=""> <i class="fa-solid fa-file-signature"></i></label>
-      <select id="tbl_servico" name="id_servico">
-      <option value="id_servico">SP</option>
-      <option value="id_servico">RJ</option>
-      <option value="id_servico">MG</option>
+  <label for="servico"> Serviço <i class="fa-solid fa-file-signature"></i></label>
+      <select id="tbl_servico" name="id_servico" >
+      <option value="1">SP</option>
+      <option value="2">RJ</option>
+      <option value="3">MG</option>
       </select>
+  </div> 
 
-     <hr>
+  <button> Salvar </button>
+</form>
+
   </div>
 
-  
-  <button> Salvar </button>
-
-
-
-</form>
 </section>
   </main>
 </body>
