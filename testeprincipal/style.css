@@ -292,29 +292,97 @@ P{
 
 
 /* ===================== RESPONSIVIDADE ===================== */
+/* ========== RESPONSIVIDADE ========== */
 
-/* ======== TABLET (até 1024px) ======== */
-/* ===================== ORIGEM ===================== */
+/* Tablets (até 1024px) */
 @media (max-width: 1024px) {
-
-  .menu li a {
-    font-size: 15px;
-    align-items: right;
+  .formulario-body {
+    flex-direction: column; /* empilha o conteúdo */
+    align-items: center;
+    justify-content: center;
   }
 
+  .texto {
+    display: none; /* remove o texto */
+  }
+
+  form {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .formulario-header {
+    width: 80%;
+    margin: 100px auto 20px auto;
+  }
+
+  .form-container {
+    left: 0;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-  /* ===================== MENU ===================== */
+
+/* Celulares (até 768px) */
 @media (max-width: 768px) {
-  .menu ul {
+  .texto {
     display: none;
   }
 
-  .hamburger {
-    display: block;
-    color: white;
+  form {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
   }
 
-  .mobile-menu {
+  .formulario-header {
+    width: 90%;
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .form-container {
+    left: 0;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  .texto {
     display: none;
+  }
+
+  .formulario-header {
+    width: 95%;
+    margin: 130px auto 15px auto;
+  }
+
+  form {
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select[name="id_servico"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 0;
   }
 }
