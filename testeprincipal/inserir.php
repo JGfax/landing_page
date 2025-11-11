@@ -71,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- // Formulário de inserção //-->
 <section class="formulario">
   <div class="formulario-header">
-  <h1>INSERIR RELATORIOS</h1>
   </div>
 </section>
 

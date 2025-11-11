@@ -1,3 +1,4 @@
+
 /* =====================  MENU ===================== */
 
  /* Faz a imagem de fundo ocupar toda a tela */
@@ -8,27 +9,27 @@
         background-size: cover; /* cobre toda a área */
         background-position: center; /* centraliza a imagem */
         background-repeat: no-repeat;
-        background-color: #080038;
+        background-color: #00076d;
         margin-bottom: 70px; /* igual ou um pouco maior que a altura do rodapé */
     }
 
 
 
 .menu {
-  background-image: linear-gradient(to right, #000222, #4b8aff);
-  padding: 5px 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+    background-image: linear-gradient(to right, #000222, #4b8aff);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Faz o menu ocupar toda a largura da tela */
+    position: fixed; /* Para fixar o menu no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Para garantir que o menu fique sobre outros elementos */
 }
 
 .menu ul {
@@ -53,14 +54,6 @@
     border-radius: 0px;
 }
 
-.menu li a:hover {
-    border-radius: 5px;
-    background-color: #b9b8ff;
-    transition: transform 0.3s, background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(8, 0, 51, 0.781);
-    transform: translateY(-10px);
-}
-
 /* ===================== HAMBURGER MENU ===================== */
 
 .hamburger {
@@ -83,7 +76,7 @@
   position: absolute;
   top: 60px; /* dentro da barra de menu */
   border: 1px solid #040949;
-  left: 60%;
+  left: 70%;
   width: 220px;
   z-index: 1000;
   border-radius: 0 0 12px 12px;
