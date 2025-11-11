@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 5. Insere as respostas na tabela 'respostas'
         foreach ($respostas as $pergunta => $resposta) {
             $sql_resposta = "INSERT INTO respostas (usuario_id, pergunta, resposta)
-                             VALUES ($usuario_id, '$pergunta', '$resposta')";
+                            VALUES ($usuario_id, '$pergunta', '$resposta')";
             
             if (!$conn->query($sql_resposta)) {
                 echo "Erro ao inserir resposta: " . $conn->error . "<br>";
