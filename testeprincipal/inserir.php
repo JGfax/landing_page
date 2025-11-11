@@ -36,6 +36,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <body>
+
+
+<div class="overlay"></div>
+
+  <div class="conteudo">
+
+  <!-- ================== MENU ================== -->
+    <section id="menu">
+        <nav class="menu">
+            <div class="logo"> 
+                <a href="index.html" target="_top">
+                </a>
+            </div>
+
+
+            <ul>
+                <li><a href="#">Página Inicial</a></li>
+            </ul>
+        </nav>
+
+
+
   <main>
 
   <!-- // Formulário de inserção //-->
@@ -108,10 +130,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div> 
 
   <button> Salvar </button>
-</form>
 
+</form>
   </div>
 
+    </section>
 </section>
   </main>
 </body>
