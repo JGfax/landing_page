@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "Home@spSENAI2025!";
-$dbname = "meubanco"; // Certifique-se de que o banco e as tabelas já existem
+$dbname = "landing"; // Certifique-se de que o banco e as tabelas já existem
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
