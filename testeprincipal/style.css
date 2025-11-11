@@ -5,6 +5,10 @@
     body {
         margin: 0; /* remove margens padrão */
         height: 50px;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
         background-image: url("image/fundo.webp"); /* caminho da imagem */
         background-size: cover; /* cobre toda a área */
         background-position: center; /* centraliza a imagem */
@@ -69,7 +73,7 @@
         z-index: 1; /* garante que fique sobre a imagem */
         color: white; /* texto visível */
         text-align: center;
-        padding: 50px;
+        padding: 5px;
         font-size: 2rem;
     }
 
@@ -82,15 +86,9 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* preto com transparência */
         z-index: 0; /* fica atrás do conteúdo */
+        opacity: 100%;
     }
 
-td {
-    font-size: 25px;
-}
-
-th {
-    font-size: 20px;
-}
 
 /*==================================== corpo ==========================================*/
 /* Estilos básicos */
