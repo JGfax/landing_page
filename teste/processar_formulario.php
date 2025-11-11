@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->beginTransaction();
 
         // Insere usuário
-        $stmt = $pdo->prepare("INSERT INTO tbl_usuarios (nome, email) VALUES (:nome, :email)");
+        $stmt = $pdo->prepare("INSERT INTO tbl_clientes (nome, email, telefone, id) VALUES (:nome, :email)");
         $stmt->execute(['nome' => $nome, 'email' => $email]);
         $id_usuario = $pdo->lastInsertId();
 
