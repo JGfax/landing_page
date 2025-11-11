@@ -15,6 +15,7 @@
 
 
 
+
 .menu {
     background-image: linear-gradient(to right, #000222, #4b8aff);
     padding: 5px 10px;
@@ -26,12 +27,25 @@
     border-radius: 5px;
     box-shadow: 0 7px 6px rgba(0, 0, 0, 0.1);
     width: 100%; /* Faz o menu ocupar toda a largura da tela */
+    height: 78px;
     position: fixed; /* Para fixar o menu no topo */
     top: 0;
     left: 0;
     z-index: 1000; /* Para garantir que o menu fique sobre outros elementos */
-    font-family: Arial, sans-serif; /* Define a fonte do menu */
+    overflow: visible;
 }
+
+.logo img {
+    width: 120px; /* aumenta o tamanho da logo */
+    height: auto;
+    position: relative;
+    top: 5px; /* ajusta verticalmente sem alterar a barra */
+    margin-top: 60px;
+    margin-left: 40px;
+    border-radius: 160px;
+    border: 2px solid  #553324;
+}
+
 
 .menu ul {
     list-style: none;
@@ -64,10 +78,11 @@
   cursor: pointer;
   user-select: none;
   position: relative;
-  left: 90%;
+  left: -15px;
   top: 0;
   margin-right: 10px;
   z-index: 1100;
+  color: white;
 }
 
 .mobile-menu {

@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head><meta charset="utf-8"><title>Relatórios</title></head>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="shortcut icon" href="image/logo.webp" type="image/x-icon">
 
 
 <body>
@@ -46,16 +47,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <!-- ================== MENU ================== -->
     <section id="menu">
         <nav class="menu">
+           <div class="logo"> 
+                    <a href="index.php" target="_top">
+                        <img src="image/logo.webp" alt="logo" width="50px">
+                    </a>
 
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
-                <ul>
-                    <li><a href="inserir.php" target="">MENU</a></li>
-                </ul>
             </nav>
 
             <!-- Menu mobile -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="inserir.php">MENU</a>
+                <a href="relatorio.php">RELATÓRIO</a>
             </div>
 
             <script>

@@ -18,6 +18,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="relatorio.css">
     <link rel="stylesheet" href="inserir.php">
+    <link rel="shortcut icon" href="image/logo.webp" type="image/x-icon">
     <title>RELATÓRIOS</title>
 
 </head>
@@ -32,19 +33,17 @@ try {
     <section id="menu">
         <nav class="menu">
             <div class="logo"> 
-                <a href="index.html" target="_top">
-                </a>
-            </div>
+                    <a href="index.php" target="_top">
+                        <img src="image/logo.webp" alt="logo" width="50px">
+                    </a>
+    
 
                 <div class="hamburger" onclick="toggleMenu()">☰</div>
-                <ul>
-                    <li><a href="inserir.php" target="">MENU</a></li>
-                </ul>
             </nav>
 
             <!-- Menu mobile -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="inserir.php">MENU</a>
+                <a href="index.php">login</a>
             </div>
 
             <script>
