@@ -30,6 +30,7 @@
     top: 0;
     left: 0;
     z-index: 1000; /* Para garantir que o menu fique sobre outros elementos */
+    font-family: Arial, sans-serif; /* Define a fonte do menu */
 }
 
 .menu ul {
@@ -52,6 +53,7 @@
     text-decoration: none;
     margin-left: 20px;
     border-radius: 0px;
+    font-family: Arial, sans-serif; /* Define a fonte dos links */
 }
 
 /* ===================== HAMBURGER MENU ===================== */
@@ -89,6 +91,7 @@
   text-decoration: none;
   border-bottom: 1px solid #0b1b4a;
   text-align: left;
+  font-family: Arial, sans-serif; /* Define a fonte do menu mobile */
 }
 
  /* ========================== TABELA ================================ */
