@@ -192,7 +192,6 @@ form { /* estilo do formulario (fundo) */
   gap: 8px;               /* espaço entre o ícone e o select */
 }
 
-
 /* Campos de entrada */
 input[type="text"], input[type="email"] {
   
@@ -213,6 +212,12 @@ select[name="id_servico"]  {
   border-radius: 8px;
   width: 83%;
   background-color: #fff;
+}
+
+/* Garanta que o ícone dentro do label também fique branco */
+.conjunto label i,
+.conjunto label {
+  color: #ffffff !important;
 }
 
 /* Campos de entrada após clicar */
