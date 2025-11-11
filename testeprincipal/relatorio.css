@@ -13,6 +13,7 @@
     }
 
 
+
 .menu {
     background-image: linear-gradient(to right, #000222, #4b8aff);
     padding: 5px 10px;
@@ -58,6 +59,35 @@
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0 4px 6px rgba(8, 0, 51, 0.781);
     transform: translateY(-10px);
+}
+
+/* ===================== HAMBURGER MENU ===================== */
+
+.hamburger {
+  display: none;
+  font-size: 38px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #5d50eb;
+  opacity: 0.95;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 50%;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid #0b1b4a;
+  text-align: center;
 }
 
  /* ========================== TABELA ================================ */
@@ -190,7 +220,14 @@ footer {
 /* ===================== RESPONSIVIDADE ===================== */
 
 /* ======== TABLET (até 1024px) ======== */
+/* ===================== ORIGEM ===================== */
 @media (max-width: 1024px) {
+
+  .menu li a {
+    font-size: 15px;
+    align-items: right;
+  }
+  
   h1 {
     font-size: 2.2rem;
   }
@@ -211,34 +248,21 @@ footer {
   }
 }
 
-/* ======== CELULAR MÉDIO (até 768px) ======== */
+/* ===================== MENU ===================== */
 @media (max-width: 768px) {
-  /* MENU */
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
   .menu ul {
-    display: none; /* esconde menu */
-    flex-direction: column;
-    width: 100%;
-    background: linear-gradient(to right, #000222, #4b8aff);
-    border-top: 1px solid #000;
+    display: none;
   }
 
-  .menu.active ul {
-    display: flex; /* mostra menu ao clicar */
+  .hamburger {
+    display: block;
+    color: white;
   }
 
-
-  .menu.active::after {
-    content: "✕";
+  .mobile-menu {
+    display: none;
   }
+
 
   /* CONTEÚDO CENTRAL NA IMAGEM */
   .conteudo {

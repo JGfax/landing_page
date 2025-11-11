@@ -36,12 +36,24 @@ try {
                 </a>
             </div>
 
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <ul>
+                    <li><a href="instrumentos.html" target="">Instrumentos</a></li>
+                </ul>
+            </nav>
 
-            <ul>
-                <li><a href="#">Página Inicial</a></li>
-            </ul>
-        </nav>
+            <!-- Menu mobile -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#">Saiba Mais</a>
+            </div>
 
+            <script>
+                function toggleMenu() {
+                    var menu = document.getElementById("mobileMenu");
+                    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+                }
+            </script>
+        </section>
 
     <h1>Relatórios gravados</h1>
   
