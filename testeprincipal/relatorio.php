@@ -22,6 +22,12 @@ try {
 </head>
 <body>
 
+<script>
+  const menu = document.querySelector('.menu');
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 
         
   <div class="overlay"></div>
@@ -38,11 +44,11 @@ try {
 
 
             <ul>
-                <li><a href="#">RELATÓRIOS</a></li>
+                <li><a href="#">Página Inicial</a></li>
             </ul>
         </nav>
     
-<br><br><br><br><br><br>
+
     <h1>Relatórios gravados</h1>
   
 

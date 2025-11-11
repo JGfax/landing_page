@@ -1,4 +1,3 @@
-
 /* =====================  MENU ===================== */
 
 .menu {
@@ -156,74 +155,154 @@ body {
     font-size: 0.95rem;
 }
 
+
+/* ===================== RODAPÉ FIXO E RESPONSIVO ===================== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(to right, #000222, #4b8aff);
+  color: #fff;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+  padding: 15px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 5px;
+}
+
+.footer-section h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.footer-section p {
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
 /* ===================== RESPONSIVIDADE ===================== */
-@media (max-width: 768px) {
-  /* Mostra o ícone hambúrguer */
-  .hamburguer {
-    display: block;
+
+/* ======== TABLET (até 1024px) ======== */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem;
   }
 
-  /* Esconde os links até o botão ser clicado */
+  table {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .conteudo {
+    padding: 40px 20px;
+  }
+
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+/* ======== CELULAR MÉDIO (até 768px) ======== */
+@media (max-width: 768px) {
+  /* MENU */
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .menu ul {
-    display: none;
+    display: none; /* esconde menu */
     flex-direction: column;
     width: 100%;
-    background-image: linear-gradient(to right, #000222, #4b8aff);
+    background: linear-gradient(to right, #000222, #4b8aff);
+    border-top: 1px solid #000;
+  }
+
+  .menu.active ul {
+    display: flex; /* mostra menu ao clicar */
+  }
+
+  .menu::after {
+    content: "☰";
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .menu.active::after {
+    content: "✕";
+  }
+
+  /* CONTEÚDO CENTRAL NA IMAGEM */
+  .conteudo {
+    position: relative;
+    top: 0;
+    padding: 100px 20px;
     text-align: center;
-    padding: 10px 0;
   }
 
-  /* Quando o hambúrguer for clicado */
-  .menu ul.ativo {
-    display: flex;
+  .conteudo h1,
+  .conteudo p {
+    font-size: 1.5rem;
   }
 
-  /* Links do menu maiores */
-  .menu ul li {
-    margin: 10px 0;
-  }
-
-  /* Texto sobre imagem */
-  .texto-centro h1 {
-    font-size: 1.8rem;
-  }
-
-  /* Tabela rola lateralmente */
+  /* TABELA RESPONSIVA */
   table {
-    width: 95%;
+    width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
   }
 
-  /* Rodapé empilhado */
+  /* RODAPÉ */
   footer {
     flex-direction: column;
+    font-size: 0.9rem;
+    padding: 15px 5px;
   }
 
   .footer-section {
     flex: 1 1 100%;
+    margin: 5px 0;
   }
 }
 
-/* ======= 📱 CELULARES PEQUENOS (até 480px) ======= */
+/* ======== CELULAR PEQUENO (até 480px) ======== */
 @media (max-width: 480px) {
-  .logo a {
-    font-size: 20px;
+  .menu li a {
+    font-size: 18px;
   }
 
-  .texto-centro h1 {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 1.7rem;
   }
 
-  th, td {
-    font-size: 14px;
+  td, th {
+    font-size: 12px;
     padding: 8px;
   }
 
-  footer {
-    padding: 10px;
-  }
-
   .footer-section h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .footer-section p {
