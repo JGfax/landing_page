@@ -48,7 +48,7 @@
 .menu ul {
     list-style: none;
     margin: 0;
-    display: flex;
+    display: none;
     flex-grow: 1; /* Faz a lista de links ocupar o máximo de espaço possível */
     justify-content: flex-start;
 }
@@ -70,7 +70,7 @@
 /* ===================== HAMBURGER MENU ===================== */
 
 .hamburger {
-  display: none;
+  display: flex;
   font-size: 38px;
   cursor: pointer;
   user-select: none;
@@ -85,16 +85,17 @@
   display: none;
   flex-direction: column;
   background-color: #202ab5;
-  opacity: 0.95;
+  opacity: 0.97;
   position: absolute;
-  top: 60px; /* dentro da barra de menu */
-  border: 1px solid #040949;
-  left: 70%;
+  top: 150px; /* logo abaixo da barra */
+  right: 10px;
   width: 220px;
-  z-index: 1000;
+  border: 1px solid #040949;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  z-index: 5000 !important; /* 🔥 força a ficar por cima de tudo */
 }
+
 
 .mobile-menu a {
   color: white;
@@ -409,7 +410,7 @@ P{
 @media (min-width: 1025px) and (max-width: 1366px) {
   /* Mantém layout lado a lado, mas com melhor proporção */
   .formulario-body {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     gap: 60px;
