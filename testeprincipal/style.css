@@ -70,7 +70,7 @@
 /* ===================== HAMBURGER MENU ===================== */
 
 .hamburger {
-  display: flex;
+  display: none;
   font-size: 38px;
   cursor: pointer;
   user-select: none;
@@ -311,9 +311,34 @@ P{
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
 
-      .hamburger {
-    display: block;
-  }
+ 
+  .hamburger {
+  display: block;
+  font-size: 38px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  left: 90%;
+  top: -100px;
+  margin-left: 320px;
+  padding: 10px;
+  z-index: 1100;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #202ab5;
+  opacity: 0.97;
+  position: absolute;
+  top: 90px; /* logo abaixo da barra */
+  right: 10px;
+  width: 220px;
+  border: 1px solid #040949;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  z-index: 5000 !important; /* 🔥 força a ficar por cima de tudo */
+}
   
   .formulario-body {
     flex-direction: column; /* empilha o conteúdo */
@@ -351,6 +376,34 @@ P{
   .texto {
     display: none;
   }
+
+  .hamburger {
+  display: block;
+  font-size: 38px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  left: 90%;
+  top: -100px;
+  margin-left: 150px;
+  padding: 10px;
+  z-index: 1100;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #202ab5;
+  opacity: 0.97;
+  position: absolute;
+  top: 90px; /* logo abaixo da barra */
+  right: 10px;
+  width: 220px;
+  border: 1px solid #040949;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  z-index: 5000 !important; /* 🔥 força a ficar por cima de tudo */
+}
 
   form {
     width: 90%;
